@@ -16,7 +16,7 @@ def main():
 
     
     st.markdown("<h1 style='text-align: center; color: Black;'>Song Recommender</h1>", unsafe_allow_html=True) 
-    st.markdown("<h3 style='text-align: center; color: Gray;'>Give us a song and artist, and we'll recommend a similar one back to you!</h3>", unsafe_allow_html=True) 
+    st.markdown("<h3 style='text-align: center; color: Gray;'>We'll recommend a similar song, based on the one you input!</h3>", unsafe_allow_html=True) 
     col1, col2, col3 = st.columns(3)
 
     with col1:

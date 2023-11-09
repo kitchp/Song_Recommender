@@ -9,7 +9,7 @@ def song_recommender(song, artist):
     import pickle
     import random
     from random import randint
-    
+    from pandas import json_normalize
     ################################## IMPORT NECESSARY FILES ##################################
     top100 = pd.read_csv('../SongRecommenderJupyter/top.csv')
     spot = pd.read_csv('../SongRecommenderJupyter/spotify_songs_clusters.csv')
@@ -103,6 +103,6 @@ def song_recommender(song, artist):
         
         
         #RECOMMEND SONG, ARTIST, AND PROVIDE LINK
-        st.text("We recommend '%s', by %s. Follow: %s to listen to the song" %(outresults['tracks']['items'][0]['name'], outresults['tracks']['items'][0]['album']['artists'][0]['name'],outresults['tracks']['items'][0]['external_urls']['spotify']))
-        
+        st.write("We recommend '%s', by %s."  %(outresults['tracks']['items'][0]['name'], outresults['tracks']['items'][0]['album']['artists'][0]['name']))
+        st.write("Follow: %s to listen to the song" %(outresults['tracks']['items'][0]['external_urls']['spotify']))
      
